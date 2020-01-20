@@ -5,7 +5,8 @@ January 19, 2020
 Bikeshare Data
 
 ### Description
-Reads a data file and returns useful info about bikesharing in various cities.
+Takes user input for a City (choice of 3) and some time filtering.
+Reads the necessary data file, filters accordingly, then outputs various statistics regarding bikesharing in the chosen city.
 
 ### Files used
 chicago.csv newyorkcity.csv washington.csv
