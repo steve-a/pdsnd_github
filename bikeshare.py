@@ -187,23 +187,23 @@ def raw_data(df):
     """
 
     answer = input('Would you like to see the first five lines of data? ').lower()
-    if answer == 'yes':
+    if answer == 'yes' or answer == 'y':
         #definte iteration variables
-        i = 0
-        j = 4
+        start = 0
+        end = 4
         #prints the first five rows of the dataframe
-        for x in range(i,j):
-            print(df.loc[x])
+        for num in range(start,end):
+            print(df.loc[num])
             print()
         while True:    
             answer = input('Would you like to see the next five lines? ').lower()
-            if answer != 'yes':
+            if answer == 'no' or answer == 'n':
                 break
             #If they answer yes adjust the variables of iteration and output the next five rows of data
-            i = j + 1
-            j += 5
-            for x in range(i,j):
-                print(df.loc[x])
+            start = end + 1
+            end += 5
+            for num in range(start,end):
+                print(df.loc[num])
                 print()
         
 
@@ -219,7 +219,7 @@ def main():
         raw_data(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+        if restart.lower() == 'no' or restart.lower() == 'n':
             break
 
 
